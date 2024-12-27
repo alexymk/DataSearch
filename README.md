@@ -37,7 +37,14 @@
 ├── setup.py
 ├── config.txt
 ├── README.md
+├── LICENSE.txt
 └── requirements.txt
+   └── Img
+      ├── DataSearch-logo.png
+      ├── Screen-1.png
+      ├── Screen-2.png
+      ├── Screen-3.png
+      └── Screen-4.png
 ```
 <br><br>
 </p>
