@@ -80,7 +80,7 @@
 Or
 ```
 1 - Open a terminal.
-2 - Write "git clone https://github.com/figwix/DataSearch"
+2 - Write "git clone https://github.com/figwix/DataSearch.git"
 3 - Write "cd DataSearch"
 4 - Write "python3 setup.py"
 5 - Write "python3 datasearch.py
