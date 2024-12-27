@@ -3,13 +3,11 @@ import time
 import sys
 from colorama import Fore, Style, init
 
-# Initialiser colorama
 init(autoreset=True)
 
 CONFIG_FILE = "config.txt"
 
-# Chemin prédéfini du dossier de recherche
-PREDEFINED_PATH = ""  # Remplacez par le chemin de votre dossier
+PREDEFINED_PATH = ""
 
 def load_config():
     """
@@ -30,7 +28,6 @@ def load_config():
         print(Fore.RED + f"[ERROR] {e}")
         sys.exit(1)
 
-# Appelle cette fonction au tout début pour charger la configuration
 load_config()
 
 def reveal_lines(lines, delay=0.1):
@@ -40,7 +37,7 @@ def reveal_lines(lines, delay=0.1):
     :param lines: Liste de chaînes à afficher.
     :param delay: Temps (en secondes) entre l'affichage de chaque ligne.
     """
-    os.system('clear' if os.name == 'posix' else 'cls')  # Efface l'écran
+    os.system('clear' if os.name == 'posix' else 'cls')
     for line in lines:
         print(Fore.YELLOW + Style.BRIGHT + line, flush=True)
         time.sleep(delay)
@@ -73,7 +70,6 @@ def search_in_files(directory, search_term, extensions):
                         if search_term in f.read():
                             matches.append(file_path)
                 except UnicodeDecodeError:
-                    # Si UTF-8 échoue, essayer un autre encodage
                     try:
                         with open(file_path, 'r', encoding='ISO-8859-1') as f:
                             if search_term in f.read():
@@ -118,7 +114,6 @@ def ask_to_continue():
 
 def main():
     while True:
-        # Étape 1 : Affichage du logo ASCII avec effet de révélation
         text = r"""
 ________          __           _________                           .__     
 \______ \ _____ _/  |______   /   _____/ ____ _____ _______   ____ |  |__  
@@ -128,7 +123,7 @@ ________          __           _________                           .__
         \/     \/          \/        \/     \/     \/            \/     \/ 
 """
         lines = text.split("\n")
-        reveal_lines(lines, delay=0.060)  # Ajustez le délai pour changer la vitesse
+        reveal_lines(lines, delay=0.060)
 
         print(Fore.RED + "                                                            Version : 2.3.5")
 
@@ -138,46 +133,40 @@ ________          __           _________                           .__
 
         print("")
 
-        # En-tête principal
         print(Fore.RED + "[" + Fore.WHITE + "::" + Fore.RED + "]" + Fore.YELLOW + " Select An Available Folder " + Fore.RED + "[" + Fore.WHITE + "::" + Fore.RED + "]" + Fore.WHITE)
 
         print("")
 
-        # Liste des sous-dossiers (ou dossiers disponibles)
         subdirs = list_subdirectories(PREDEFINED_PATH)
         if not subdirs:
             print(Fore.RED + "[" + Fore.WHITE + "!" + Fore.RED + "] No subfolders found, Try Later..." + Fore.WHITE)
             print("")
-            continue  # Retour au début de la boucle
+            continue
 
-        # Affichage des sous-dossiers avec numérotation et style
         for i, subdir in enumerate(subdirs, start=1):
             print(Fore.RED + "[" + Fore.WHITE + f"{str(i).zfill(2)}" + Fore.RED + "]" + Fore.YELLOW + f" {subdir}" + Fore.WHITE)
 
-        # Ajouter une ligne avant et après l'option "Quitter"
         print("\n" + Fore.RED + "[" + Fore.WHITE + "00" + Fore.RED + "]" + Fore.YELLOW + " Exit " + Fore.WHITE)
         print("")
 
-        # Sélection de l'option
         while True:
             try:
                 choice = input(Fore.RED + "[" + Fore.WHITE + "-" + Fore.RED + "]" + Fore.GREEN + " Select an option : " + Fore.BLUE).strip()
                 print("")
                 if choice.isdigit() and int(choice) == 0:
                     print(Fore.RED + "[" + Fore.WHITE + "::" + Fore.RED + "] Exiting the program...")
-                    return  # Quitter le programme
+                    return
                 elif choice.isdigit() and 1 <= int(choice) <= len(subdirs):
-                    selected_dir = os.path.join(PREDEFINED_PATH, subdirs[int(choice)-1])  # -1 pour ajuster l'index
+                    selected_dir = os.path.join(PREDEFINED_PATH, subdirs[int(choice)-1])
                     break
                 else:
                     print(Fore.RED + "[" + Fore.WHITE + "!" + Fore.RED + "] Invalid Option, Try Again..." + Fore.WHITE)
                     print("")
             except Exception as e:
                 print(Fore.RED + "[" + Fore.WHITE + "!" + Fore.RED + "] Error: " + str(e))
-                time.sleep(1)  # Affiche l'erreur pendant 1 seconde
-                continue  # Repose la question
+                time.sleep(1)
+                continue
 
-        # Demander le terme de recherche
         while True:
             try:
                 search_term = input(Fore.RED + "[" + Fore.WHITE + "-" + Fore.RED + "]" + Fore.GREEN + " Search Term : " + Fore.BLUE).strip()
@@ -185,18 +174,16 @@ ________          __           _________                           .__
                 if not search_term:
                     print(Fore.RED + "[" + Fore.WHITE + "!" + Fore.RED + "] Invalid Search, Try Again..." + Fore.WHITE)
                     print("")
-                    continue  # Retour au début de la boucle
+                    continue
                 break
             except Exception as e:
                 print(Fore.RED + "[" + Fore.WHITE + "!" + Fore.RED + "] Error: " + str(e))
                 time.sleep(1)
-                continue  # Repose la question
+                continue
 
-        # Recherche dans les fichiers
         extensions = ('.txt', '.sql', '.csv')
         matches = search_in_files(selected_dir, search_term, extensions)
 
-        # Résultats de la recherche
         if matches:
             print(Fore.RED + "[" + Fore.WHITE + "::" + Fore.RED + "]" + Fore.GREEN + " Files containing the term '" + Style.BRIGHT + f"{search_term}" + Style.NORMAL + "' " + Fore.RED + "[" + Fore.WHITE + "::" + Fore.RED + "]")
             for match in matches:
@@ -204,7 +191,6 @@ ________          __           _________                           .__
         else:
             print(Fore.RED + "[" + Fore.WHITE + "!" + Fore.RED + "] No file contains the term '" + Style.BRIGHT + f"{search_term}" + Style.NORMAL + "'" + Fore.WHITE)
 
-        # Demander à l'utilisateur s'il souhaite continuer
         if not ask_to_continue():
             break
 
