@@ -1,0 +1,1 @@
+DB_PATH=/Users/alexandrestelmaszyk/Documents/Informatique/DataBase/db
