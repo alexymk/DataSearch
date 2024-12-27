@@ -94,5 +94,5 @@ Or
   
   - DataSearch Tools has been developed solely for educational purposes.<br>
   - This project has been created with good intentions and is intended for personal use only.<br>
-  - By choosing to use RedTiger, you acknowledge and accept full responsibility for any consequences that may result from your actions.
+  - By choosing to use DataSearch, you acknowledge and accept full responsibility for any consequences that may result from your actions.
 </p>
