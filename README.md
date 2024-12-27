@@ -68,7 +68,7 @@
 
 <h1 align="center">Installation</h1>
 
-<a href="https://github.com/loxy0dev/RedTiger-Tools/archive/refs/tags/v6.1.zip">Dowloads "DataSearch.zip" Here</a>
+<a href="https://github.com/figwix/DataSearch/archive/refs/heads/main.zip">Dowloads "DataSearch.zip" Here</a>
 
 <p>
   
