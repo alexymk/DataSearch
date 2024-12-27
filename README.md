@@ -83,7 +83,7 @@ Or
 2 - Write "git clone https://github.com/figwix/DataSearch.git"
 3 - Write "cd DataSearch"
 4 - Write "python3 setup.py"
-5 - Write "python3 main.py
+5 - Write "python3 main.py"
 ```
 <br><br>
 </p>
