@@ -91,13 +91,3 @@ Or
   - The scripts in the "Settings/Program/FileDetectedByAntivirus" folder are <strong>detected by antivirus</strong> but pose no threat to you. These are <strong>not backdoors or malware</strong>.
 <br><br>
 </p>
-
-<h1 align="center">Donation</h1>
-
-<p>
-  
-  <strong>Bitcoin Address:</strong>
-  1MSRzopmhasr9ByHBrksScqv6wByVagDKe
-  <strong>Litecoin Address:</strong>
-  LXXnPk5hbUxNomJixbysoikZSv6QAiQyVQ
-</p>
