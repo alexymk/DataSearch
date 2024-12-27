@@ -4,10 +4,8 @@ import time
 from colorama import Fore, Style, init
 import subprocess
 
-# Initialiser colorama
 init(autoreset=True)
 
-# Informations du programme
 VERSION = "2.3.5"
 COPYRIGHT = "Tool Created by figwix (figwix.eu)"
 CONFIG_FILE = "config.txt"
@@ -30,7 +28,7 @@ ________          __           _________                           .__
 
 def install_libraries():
     """Installe les bibliothèques nécessaires via pip."""
-    libraries = ["colorama"]  # Ajoute d'autres bibliothèques ici si nécessaire
+    libraries = ["colorama"]
     print(Fore.GREEN + "[INFO] Installing required libraries...")
     for lib in libraries:
         try:
@@ -53,16 +51,12 @@ def setup_database_path():
             print(Fore.RED + "[ERROR] Invalid path. Please enter a valid folder path.")
 
 def main():
-    # Étape 1 : Installation des bibliothèques requises
     install_libraries()
 
-    # Étape 2 : Afficher le logo
     display_logo()
 
-    # Étape 3 : Demander le chemin de la base de données
     setup_database_path()
 
-    # Confirmation finale
     print(Fore.GREEN + "[INFO] Setup completed successfully!")
     time.sleep(1)
 
