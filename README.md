@@ -88,6 +88,4 @@ Or
   - DataSearch has been developed solely for educational purposes.<br>
   - This project has been created with good intentions and is intended for personal use only.<br>
   - By choosing to use DataSearch, you acknowledge and accept full responsibility for any consequences that may result from your actions.<br>
-  - The scripts in the "Settings/Program/FileDetectedByAntivirus" folder are <strong>detected by antivirus</strong> but pose no threat to you. These are <strong>not backdoors or malware</strong>.
-<br><br>
 </p>
