@@ -1,5 +1,1 @@
-os
-time
-sys
 colorama
-subprocess
