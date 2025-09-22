@@ -55,7 +55,7 @@
 
 <p>
 - Latest version of <a href="https://www.python.org/downloads/">Python</a>.<br>
-- Linux recent version.
+- MacOS recent version.
 </p>
 
 <h3>Windows:</h3>
