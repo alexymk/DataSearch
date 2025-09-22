@@ -7,7 +7,7 @@ import subprocess
 init(autoreset=True)
 
 VERSION = "2.3.5"
-COPYRIGHT = "Tool Created by figwix (figwix.eu)"
+COPYRIGHT = "Tool Created by alex.ymk (auto-dex.fr)"
 CONFIG_FILE = "config.txt"
 
 def display_logo():
