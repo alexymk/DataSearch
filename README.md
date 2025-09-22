@@ -3,12 +3,12 @@
 <h1 align="center">DataSearch</h1>
 
 <p align="center">
-   <a href="https://alexymk.eu">Website</a>
+   <a href="https://auto-dex.fr">Website</a>
 </p>
 
 <p>
   
-  - Developed in <strong>Python</strong>, by <a href="https://alexymk.eu">alexymk</a><br>
+  - Developed in <strong>Python</strong>, by <a href="https://auto-dex.fr">alexymk</a><br>
   - Tool in <strong>English</strong>.<br>
   - Available on <strong>MacOS</strong>, <strong>Windows</strong> and <strong>Linux</strong>.<br>
   - <strong>No malware</strong> or <strong>backdoor</strong>.<br>
