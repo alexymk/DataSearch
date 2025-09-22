@@ -129,7 +129,7 @@ ________          __           _________                           .__
 
         print("")
 
-        print(Fore.GREEN + "[" + Fore.WHITE + "-" + Fore.GREEN + "]" + Fore.CYAN + " Tool Created by figwix (figwix.eu)")
+        print(Fore.GREEN + "[" + Fore.WHITE + "-" + Fore.GREEN + "]" + Fore.CYAN + " Tool Created by alex.ymk (auto-dex.fr)")
 
         print("")
 
