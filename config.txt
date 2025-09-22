@@ -1,1 +1,1 @@
-DB_PATH=/Users/alexandrestelmaszyk/Documents/Informatique/DataBase/db
+DB_PATH=/Users/[username]/[location]
