@@ -3,12 +3,12 @@
 <h1 align="center">DataSearch</h1>
 
 <p align="center">
-   <a href="https://figwix.eu">Website</a>
+   <a href="https://alexymk.eu">Website</a>
 </p>
 
 <p>
   
-  - Developed in <strong>Python</strong>, by <a href="https://figwix.eu">figwix</a><br>
+  - Developed in <strong>Python</strong>, by <a href="https://alexymk.eu">alexymk</a><br>
   - Tool in <strong>English</strong>.<br>
   - Available on <strong>MacOS</strong>, <strong>Windows</strong> and <strong>Linux</strong>.<br>
   - <strong>No malware</strong> or <strong>backdoor</strong>.<br>
@@ -75,7 +75,7 @@
 
 <h1 align="center">Installation</h1>
 
-<a href="https://github.com/figwix/DataSearch/archive/refs/heads/main.zip">Dowloads "DataSearch.zip" Here</a>
+<a href="https://github.com/alexymk/DataSearch/archive/refs/heads/main.zip">Dowloads "DataSearch.zip" Here</a>
 
 <p>
   
@@ -87,7 +87,7 @@
 Or
 ```
 1 - Open a terminal.
-2 - Write "git clone https://github.com/figwix/DataSearch.git"
+2 - Write "git clone https://github.com/alexymk/DataSearch.git"
 3 - Write "cd DataSearch"
 4 - Write "python3 setup.py"
 5 - Write "python3 main.py"
